@@ -63,5 +63,93 @@ body {
 
 #main-content {
     background-color: var(--clr-surface-a0);
+    display: flex;
 }
 
+#content-left {
+    flex: 1.5;
+}
+
+#side-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-surface-a10);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#side-menu-inner {
+    position: relative;
+    width: 90%;
+    height: 95%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+#side-menu-tabs {
+    position: relative;
+    width: 100%;
+}
+
+#model-selection-area {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 5%;
+}
+
+.model-selection-card {
+    background-color: var(--clr-surface-a20);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--clr-primary-a0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.model-selection-card:hover {
+    transform: scale(1.05);
+}
+
+.model-selection-card img {
+    border-radius: 20px;
+    position: relative;
+    width: 80%;
+    margin-top: 10%;
+}
+
+.model-selection-card p {
+    position: relative;
+    color: var(--clr-surface-a0);
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    margin-bottom: 15%;
+    font-size: 14pt;
+}
+
+#menu-footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    color: white;
+    font-family: "Verdana", sans-serif;
+}
+
+#content-right {
+    flex: 1;
+}
+
+#model-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
