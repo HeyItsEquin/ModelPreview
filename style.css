@@ -549,6 +549,22 @@ body {
     --poster-color: transparent;
 }
 
+#image-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#video-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
 @media (max-width: 680px) {
     :root { --panel-width: 100%; }
     #main-content { flex-direction: column; }

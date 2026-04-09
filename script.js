@@ -7,8 +7,30 @@ document.querySelectorAll('.model-selection-card').forEach(card => {
         document.getElementById('empty-state').style.opacity = '0';
         document.querySelectorAll('.model-selection-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
+        const type = card.dataset.type;
 
-        document.getElementById("model-preview").src = card.dataset.modelSrc;
+        const mViewer = document.getElementById("model-preview");
+        const iViewer = document.getElementById("image-preview");
+        const vViewer = document.getElementById("video-preview");
+
+        const hideAll = () => { mViewer.hidden = true; iViewer.hidden = true; vViewer.hidden = true; };
+        switch(type) {
+            case "model":
+                hideAll();
+                mViewer.hidden = false;
+                mViewer.src = card.dataset.modelSrc;
+                break;
+            case "image":
+                hideAll();
+                iViewer.hidden = false;
+                iViewer.src = card.dataset.modelSrc;
+                break;
+            case "video":
+                hideAll();
+                vViewer.hidden = false;
+                vViewer.src = card.dataset.modelSrc;
+                break;
+        }
     });
 });
 
